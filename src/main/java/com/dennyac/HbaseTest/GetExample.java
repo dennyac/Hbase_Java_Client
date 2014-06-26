@@ -16,6 +16,7 @@ public class GetExample {
 
 	public static void main(String[] args) throws IOException{
 		// vv GetExample
+		System.out.println("Initializing");
 		Configuration conf = HBaseConfiguration.create(); // co
 															// GetExample-1-CreateConf
 															// Create the
@@ -29,15 +30,18 @@ public class GetExample {
 		// helper.createTable("testtable", "colfam1");
 		// }
 		// vv GetExample
-		HTable table = new HTable(conf, "denny_test"); // co
+		System.out.println("Configuration created");
+                HTable table = new HTable(conf, "denny_test"); // co
 														// GetExample-2-NewTable
 														// Instantiate a new
 														// table reference.
 
+		System.out.println("HTable object create");
 		Get get = new Get(Bytes.toBytes("r1")); // co GetExample-3-NewGet
 												// Create get with specific
 												// row.
 
+		System.out.println("Creating get object");
 		get.addColumn(Bytes.toBytes("d"), Bytes.toBytes("c1")); // co
 																// GetExample-4-AddCol
 																// Add
@@ -47,9 +51,11 @@ public class GetExample {
 																// the
 																// get.
 
+		System.out.println("Adding column to get object");
 		Result result = table.get(get); // co GetExample-5-DoGet Retrieve row
 										// with selected columns from HBase.
 
+		System.out.println("Assigning byte array");
 		byte[] val = result.getValue(Bytes.toBytes("d"), Bytes.toBytes("c1")); // co
 																				// GetExample-6-GetValue
 																				// Get
