@@ -32,7 +32,7 @@ public class ScanExample {
 		ResultScanner scanner = table.getScanner(scan);
 		System.out.println("ResultScanner object instantiated");
 		for(Result res: scanner){
-			System.out.println(res);
+			System.out.println(res.getRow().toString());
 			System.out.println("Next iteration");
 		}
 		
