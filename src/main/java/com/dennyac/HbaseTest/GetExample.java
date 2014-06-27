@@ -17,7 +17,10 @@ public class GetExample {
 	public static void main(String[] args) throws IOException{
 		// vv GetExample
 		System.out.println("Initializing");
-		Configuration conf = HBaseConfiguration.create(); // co
+		Configuration conf = HBaseConfiguration.create();
+conf.set("hbase.zookeeper.quorum","172.31.2.26");
+					conf.set("hbase.zookeeper.property.clientPort","2181");
+
 															// GetExample-1-CreateConf
 															// Create the
 															// configuration.
