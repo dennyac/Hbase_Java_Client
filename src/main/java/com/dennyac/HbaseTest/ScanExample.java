@@ -10,6 +10,8 @@ import org.apache.hadoop.hbase.client.Scan;
 //import util.HBaseHelper;
 
 
+import org.apache.hadoop.hbase.util.Bytes;
+
 import java.io.IOException;
 
 public class ScanExample {
@@ -32,7 +34,7 @@ public class ScanExample {
 		ResultScanner scanner = table.getScanner(scan);
 		System.out.println("ResultScanner object instantiated");
 		for(Result res: scanner){
-			System.out.println(res.getRow().toString());
+			System.out.println(Bytes.toString(res.getRow()));
 			System.out.println("Next iteration");
 		}
 		
