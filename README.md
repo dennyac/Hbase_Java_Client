@@ -1,6 +1,3 @@
-Hbase_Java_Client
-=================
-
 # About
 
 This repository contains a few examples of how to connect to HBase and fetch data using the Java Client API.
@@ -12,6 +9,7 @@ This repository contains a few examples of how to connect to HBase and fetch dat
 2. Run the following commands in command line within the repository- 
 
 <pre><code>
+> cd Hbase_Java_Client
 > mvn clean
 > mvn package
 > cd target
